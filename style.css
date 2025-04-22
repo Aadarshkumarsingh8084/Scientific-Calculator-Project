@@ -1,0 +1,90 @@
+:root {
+    --bg-color: #1a1a1a;
+    --display-color: #2d2d2d;
+    --button-color: #3b3b3b;
+    --operation-color: #ff9500;
+    --scientific-color: #505050;
+    --hover-color: #4d4d4d;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    width: 320px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+    padding: 20px;
+    text-align: right;
+    background-color: var(--display-color);
+    color: var(--text-color);
+}
+
+.previous-operand {
+    min-height: 24px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.current-operand {
+    font-size: 2rem;
+    margin-top: 5px;
+    word-wrap: break-word;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background-color: var(--button-color);
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+.operation {
+    background-color: var(--operation-color);
+}
+
+.operation:hover {
+    background-color: #ffaa33;
+}
+
+.scientific {
+    background-color: var(--scientific-color);
+    font-size: 1rem;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
